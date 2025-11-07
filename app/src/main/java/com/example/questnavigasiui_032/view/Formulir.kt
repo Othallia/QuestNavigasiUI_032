@@ -14,8 +14,9 @@ fun FormIsian(
             TopAppBar(
                 title = {Text(text = stringResource(id=R.string.home), color = Color.White)},
                 colors = TopAppBarDefaults.mediumTopAppBarColors(
-                    containerColor = colorResource(id = R.color.teal_700)
-                )
-            )
-        })
-}
+                    containerColor = colorResource(id = R.color.teal_700))
+            )}
+    ){ isiRuang ->
+        Column(modifier = Modifier.padding(paddingValues = isiRuang))
+    }
+})
