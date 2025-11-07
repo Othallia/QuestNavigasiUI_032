@@ -8,4 +8,7 @@ import androidx.compose.runtime.ComposableTarget
 fun FormIsian(
     jenisK:List<String> = ListOf("Laki-laki", "Perempuan"),
     onSubmitBtnClick : () -. Unit
-)
+){
+    Scaffold (modifier=Modifier,
+        topBar)
+}
