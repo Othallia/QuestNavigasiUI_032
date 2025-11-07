@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">QuestNavigasiUI_032</string>
+    <string name="submit">submit</string>
+    <string name="back">back</string>
 </resources>
