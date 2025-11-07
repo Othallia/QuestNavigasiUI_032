@@ -2,4 +2,9 @@
     <string name="app_name">QuestNavigasiUI_032</string>
     <string name="submit">submit</string>
     <string name="back">back</string>
+    <string name="nama_lengkap">NAMA LENGKAP</string>
+    <string name="jenis_kelamin">JENIS KELAMIN</string>
+    <string name="alamat">ALAMAT</string>
+    <string name="tampil">TAM{IL</string>
+    <string name="home">Form Isian</string>
 </resources>
