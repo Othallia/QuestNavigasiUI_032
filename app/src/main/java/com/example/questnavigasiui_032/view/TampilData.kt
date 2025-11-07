@@ -3,6 +3,7 @@ package com.example.questnavigasiui_032.view
 import androidx.compose.foundation.layout.Arrangement
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.Spacer
+import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
@@ -35,20 +36,25 @@ fun TampilData(
         Pair(first = stringResource(id = R.string.jenis_kelamin), second = "Lainnya"),
         Pair(first = stringResource(id = R.string.alamat), second = "Yogyakarta"),
     )
-    Scaffold(modifier = Modifier,
+    Scaffold(
+        modifier = Modifier,
         topBar = {
             TopAppBar(
                 title = { Text(text = stringResource(id = R.string.tampil), color = Color.White) },
                 colors = TopAppBarDefaults.mediumTopAppBarColors(containerColor = colorResource(id = R.color.teal_700))
             )
-        }) { isiRuang ->
+        }
+    ) { isiRuang ->
         Column(
-            modifier = Modifier.padding(paddingValues = isiRuang),
-            verticalArrangement = Arrangement.SpaceBetween
+            modifier = Modifier
+                .padding(paddingValues = isiRuang)
+                .fillMaxSize(), // Fill size for SpaceBetween to work
+            verticalArrangement = Arrangement.SpaceBetween // Spaces children (top Column and bottom Column)
         ) {
+            // Top Column for items
             Column(
                 modifier = Modifier.padding(all = dimensionResource(id = R.dimen.padding_medium)),
-                verticalArrangement = Arrangement.spacedBy(space = dimensionResource(id =R.dimen.padding_small))
+                verticalArrangement = Arrangement.spacedBy(space = dimensionResource(id = R.dimen.padding_small))
             ) {
                 items.forEach { item ->
                     Column {
@@ -63,12 +69,17 @@ fun TampilData(
                 }
                 HorizontalDivider(thickness = 1.dp, color = Color.Cyan)
             }
-            Spacer(modifier = Modifier.height(height = 10.dp))
+            Column(
+                modifier = Modifier.padding(all = dimensionResource(id = R.dimen.padding_medium))
+            ) {
+                Spacer(modifier = Modifier.height(height = 10.dp))
                 Button(
                     modifier = Modifier.fillMaxWidth(),
-                    onClick = onBackBtnClick) {
+                    onClick = onBackBtnClick
+                ) {
                     Text(text = stringResource(id = R.string.back))
                 }
+            }
         }
     }
 }
