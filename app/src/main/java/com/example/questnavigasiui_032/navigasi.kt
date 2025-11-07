@@ -1,4 +1,4 @@
-package com.example.questnavigasiui_041
+package com.example.questnavigasiui_032
 
 import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
@@ -9,9 +9,7 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import com.example.questnavigasiui_032.view.FormIsian
-import com.example.questnavigasiui_032.view.TampilData
-import com.example.questnavigasiui_041.view.FormIsian
-import com.example.questnavigasiui_041.view.TampilData
+import com.example.questnavigasiui_032.view.TampilData  
 
 enum class Navigasi {
     Formulir,
