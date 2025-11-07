@@ -1,2 +1,11 @@
 package com.example.questnavigasiui_032.view
 
+import androidx.compose.runtime.Composable
+import androidx.compose.runtime.ComposableTarget
+
+@OptIn(...markerClass = ExperimentalMaterial3Api::clas)
+@Composable
+fun FormIsian(
+    jenisK:List<String> = ListOf("Laki-laki", "Perempuan"),
+    onSubmitBtnClick : () -. Unit
+)
